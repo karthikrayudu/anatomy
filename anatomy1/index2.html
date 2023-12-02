@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MALE</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <style>
+      img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      body {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body background="img/AdobeStock_281967200 copy - Copy.jpg">
+    <!--<p>
+      select the part that hurts: age: <span id="value1"></span> weight:
+      <span id="value2"></span> height: <span id="value3"></span>
+    </p>-->
+    <script>
+      var value1 = document.getElementById("value1");
+      var value2 = document.getElementById("value2");
+      var value3 = document.getElementById("value3");
+      var urlParams = new URLSearchParams(window.location.search);
+      value1.innerHTML = urlParams.get("value1");
+      value2.innerHTML = urlParams.get("value2");
+      value3.innerHTML = urlParams.get("value3");
+    </script>
+    <p>Select the place that hurts !!</p>
+    <img
+      src="img/IMG_0035 2.jpg"
+      alt="man"
+      usemap="#workmap"
+      width="554"
+      height="554"
+    />
+    <map name="workmap">
+      <area shape="rect" coords="117,23,176,90" alt="head" href="head.html" />
+      <area
+        shape="rect"
+        coords="125,137,165,180"
+        alt="heart"
+        href="heart.html"
+      />
+      <area
+        shape="poly"
+        coords="70,169,68,322,85,286,97,179,59,235,91,229"
+        alt="righthand"
+        href="righthand.html"
+      />
+      <area shape="rect" coords="97,314,196,449" alt="legs" href="legs.html" />
+      <area
+        shape="poly"
+        coords="189,127,213,120,217,141,222,182,232,228,229,278,223,323,208,295,190,165,190,150"
+        alt="lefthand"
+        href="lefthand.html"
+      />
+      <area
+        shape="rect"
+        coords="396,121,419,231"
+        alt="spine"
+        href="spine.html"
+      />
+      <area
+        shape="rect"
+        coords="124,217,150,250"
+        alt="appendcitis"
+        href="appen.html"
+       />
+      <area shape="rect" coords="394,71,422,84" alt="neck" href="neck.html" />
+    </map>
+  </body>
+</html>

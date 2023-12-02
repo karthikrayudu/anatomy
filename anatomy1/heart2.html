@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .accordion {
+        background-color: #eee;
+        color: #444;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+        transition: 0.4s;
+      }
+
+      .active,
+      .accordion:hover {
+        background-color: #ccc;
+      }
+
+      .panel {
+        padding: 0 18px;
+        display: none;
+        background-color: white;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body background="img/bg1.jpg">
+    <h2>Severity</h2>
+
+    <button class="accordion">Mild</button>
+    <div class="panel">
+      <img src="img/heart2.JPG" height="250" width="250" />
+      <p>
+        Lemon Water:lemon juice can stimulate healthy digestion, helping break
+        down food more efficiently and making it easier for the digestive system
+        to absorb nutrients. Almonds:When acid reflux is to blame for the heart
+        pain, eating a few almonds or drinking a cup of almond milk may help.
+        Baking soda:Another popular recommendation for heart pain is to add
+        baking soda to warm or cool water.
+      </p>
+      <a href="https://youtube.com/shorts/I_LB_lwUze8?feature=share">youtube</a>
+    </div>
+
+    <button class="accordion">Severe</button>
+    <div class="panel">
+      <li><a href="index4.html">heart2</a></li>
+    </div>
+
+    <script>
+      var acc = document.getElementsByClassName("accordion");
+      var i;
+
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.display === "block") {
+            panel.style.display = "none";
+          } else {
+            panel.style.display = "block";
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

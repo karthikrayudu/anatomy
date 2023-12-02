@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FEMALE</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <style>
+      img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      body {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body background="img/AdobeStock_281967200 copy - Copy.jpg">
+    <!--<p>
+      select the part that hurts: age: <span id="value1"></span> weight:
+      <span id="value2"></span> height: <span id="value3"></span>
+    </p>-->
+    <script>
+      var value1 = document.getElementById("value1");
+      var value2 = document.getElementById("value2");
+      var value3 = document.getElementById("value3");
+      var urlParams = new URLSearchParams(window.location.search);
+      value1.innerHTML = urlParams.get("value1");
+      value2.innerHTML = urlParams.get("value2");
+      value3.innerHTML = urlParams.get("value3");
+    </script>
+    <p>Select the place that hurts !!</p>
+    <img
+      src="img/79.jpg"
+      alt="women"
+      usemap="#workmap"
+      width="266"
+      height="290"
+    />
+    <map name="workmap">
+      <area shape="rect" coords="22,5,72,31" alt="head" href="head2.html" />
+      <area
+        shape="rect"
+        coords="36,54,53,82"
+        alt="heart"
+        href="heart2.html"
+      />
+      <area
+        shape="rect"
+        coords="0,58,17,147"
+        alt="righthand"
+        href="righthand2.html"
+      />
+      <area shape="rect" coords="93,335,193,545" alt="legs" href="legs2.html" />
+      <area
+        shape="poly"
+        coords="72,75,78,66,84,89,79,98,88,109,84,117,86,100,84,130,79,137,89,146,94,128,79,104"
+        alt="lefthand"
+        href="lefthand2.html"
+      />
+      <area
+        shape="rect"
+        coords="236,48,256,113"
+        alt="spine"
+        href="spine2.html"
+      />
+      <area shape="rect" coords="219,25,274,40" alt="neck" href="neck2.html" />
+    </map>
+  </body>
+</html>

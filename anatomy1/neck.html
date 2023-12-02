@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .accordion {
+        background-color: #eee;
+        color: #444;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+        transition: 0.4s;
+      }
+
+      .active,
+      .accordion:hover {
+        background-color: #ccc;
+      }
+
+      .panel {
+        padding: 0 18px;
+        display: none;
+        background-color: white;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body background="img/bg1.jpg">
+    <h2>Severity</h2>
+
+    <button class="accordion">Mild</button>
+    <div class="panel">
+      <img src="img/neck.jpg" height="250" width="250" />
+      <p>
+        Apply Heat or Cold: Use a heating pad or cold pack to relax muscles or
+        reduce inflammation. Gentle Neck Stretches: Perform gentle stretches to
+        relieve tension and improve flexibility. Maintain Good Posture: Be
+        mindful of your posture, both while sitting and standing, to avoid
+        strain on your neck.
+      </p>
+      <a href="https://youtube.com/shorts/oT3xT-YsUXc?feature=share">youtube</a>
+    </div>
+
+    <button class="accordion">Severe</button>
+    <div class="panel">
+      <li><a href="index4.html">neck</a></li>
+    </div>
+
+    <script>
+      var acc = document.getElementsByClassName("accordion");
+      var i;
+
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.display === "block") {
+            panel.style.display = "none";
+          } else {
+            panel.style.display = "block";
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
